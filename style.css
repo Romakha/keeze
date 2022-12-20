@@ -56,6 +56,10 @@ select {
     cursor: pointer;
 }
 
+select option {
+    color: #000;
+}
+
 .text-underline {
     text-decoration: underline;
 }
@@ -231,19 +235,30 @@ header {
 .header-navigation {
     width: 100%;    
     font-weight: 400;
+}
+
+.navigation-burger {
+    padding: 15px 0;
     display: none;
+    justify-content: flex-end;
+}
+
+.navigation-burger img {
+    width: 24px;
+    height: 24px;
 }
 
 .header-navigation__nav {
     height: 4.063rem;
     display: flex;
+    flex-wrap: wrap;
     align-items: center;
     justify-content: space-between;
     color: #fff;
 }
 
 .header-navigation__nav li {
-    
+    white-space: nowrap;
 }
 
 .header-navigation__nav select {
@@ -282,9 +297,18 @@ header {
     margin: 0 auto;
 }
 
+.spending-calculator__number {
+    font-weight: 600;
+    font-size: 20px;
+    line-height: 23px;
+}
+
 .spending-calculator input {
     height: 56px;
     margin-bottom: 36px;
+    border: 2.5px solid #4724FB;
+    border-radius: 8px;
+    outline: none;
 }
 
 .spending-calculator__card {
@@ -541,5 +565,31 @@ footer .input-block .btn-touch {
 
     .main-block-info__inf  {
         padding: 1.5rem;
+    }
+}
+
+@media screen and (max-width: 756px) {
+    html{
+        font-size: 12px;
+    }
+
+    .visually-impaired__span {
+        display: none;
+    }
+
+    .navigation-burger {
+        display: flex;
+    }
+
+    .header-navigation__nav {
+        display: none;
+    }
+
+    #language {
+        display: none;
+    }
+
+    .state-information {
+        padding: 0 2rem;
     }
 }
